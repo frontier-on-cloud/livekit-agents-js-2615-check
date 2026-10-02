@@ -1,0 +1,17 @@
+{"harness":true,"time":1790970436527,"event":"run_start","label":"baseline-1","model":"gemini-3.8-live","toolMs":3000,"wav":"assets/book.wav"}
+{"level":40,"time":1790970436532,"pid":5460,"hostname":"mac.home","msg":"turnDetection is a TurnDetector, but the LLM is a RealtimeModel with server-side turn detection enabled, ignoring the turnDetection setting"}
+{"harness":true,"time":1790970436532,"event":"conversation_item_added"}
+{"level":20,"time":1790970436533,"pid":5460,"hostname":"mac.home","newAgentId":"default_agent","msg":"Agent handoff inserted into chat context"}
+{"level":20,"time":1790970436534,"pid":5460,"hostname":"mac.home","msg":"Connecting to Gemini Realtime API..."}
+{"harness":true,"time":1790970436534,"event":"genai_live_connect","n":1,"model":"gemini-3.8-live","toolBehavior":"unset"}
+{"level":20,"time":1790970436541,"pid":5460,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity_onEnter started"}
+{"level":20,"time":1790970436542,"pid":5460,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity_onEnter done"}
+{"level":20,"time":1790970436542,"pid":5460,"hostname":"mac.home","msg":"using audio io: `FileAudioInput` -> `AgentSession` -> `SimAudioOutput`"}
+{"level":40,"time":1790970436542,"pid":5460,"hostname":"mac.home","audioOutput":"SimAudioOutput","msg":"resumeFalseInterruption is enabled but audio output does not support pause, it will be ignored"}
+{"level":20,"time":1790970436542,"pid":5460,"hostname":"mac.home","msg":"using transcript io: `AgentSession` -> (none)"}
+{"harness":true,"time":1790970436542,"event":"agent_state","from":"initializing","to":"listening"}
+{"harness":true,"time":1790970436542,"event":"session_started"}
+{"level":20,"time":1790970436849,"pid":5460,"hostname":"mac.home","closed":false,"sessionShouldClose":true,"aborted":false,"msg":"send task finished."}
+{"level":20,"time":1790970436852,"pid":5460,"hostname":"mac.home","msg":"Connecting to Gemini Realtime API..."}
+{"harness":true,"time":1790970436852,"event":"genai_live_connect","n":2,"model":"gemini-3.8-live","toolBehavior":"unset"}
+{"harness":true,"time":1790970436852,"event":"abort_second_connect","n":2}

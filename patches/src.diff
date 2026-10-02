@@ -1,0 +1,31 @@
+diff --git a/plugins/google/src/realtime/realtime_api.ts b/plugins/google/src/realtime/realtime_api.ts
+index a6c6f75..bf0f181 100644
+--- a/plugins/google/src/realtime/realtime_api.ts
++++ b/plugins/google/src/realtime/realtime_api.ts
+@@ -1974,13 +1974,20 @@ export class RealtimeSession extends llm.RealtimeSession {
+     }
+ 
+     const serverContent = response.serverContent;
++    if (!serverContent) {
++      return false;
++    }
++    const hasContent =
++      !!serverContent.modelTurn ||
++      serverContent.outputTranscription != null ||
++      serverContent.inputTranscription != null;
++    // A content-free generationComplete/turnComplete after the turn already closed (toolCall, THEN
++    // generationComplete for that turn) must not open a phantom agent-initiated generation.
++    if (!hasContent && !this.pendingGenerationFut) {
++      return false;
++    }
+     return (
+-      !!serverContent &&
+-      (serverContent.modelTurn ||
+-        serverContent.outputTranscription != null ||
+-        serverContent.inputTranscription != null ||
+-        serverContent.generationComplete != null ||
+-        serverContent.turnComplete != null)
++      hasContent || serverContent.generationComplete != null || serverContent.turnComplete != null
+     );
+   }
+ }

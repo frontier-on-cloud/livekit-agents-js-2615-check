@@ -1,0 +1,155 @@
+{"harness":true,"time":1790970629590,"event":"run_start","label":"baseline-3","model":"gemini-3.8-live","toolMs":3000,"wav":"assets/book.wav"}
+{"level":40,"time":1790970629594,"pid":7012,"hostname":"mac.home","msg":"turnDetection is a TurnDetector, but the LLM is a RealtimeModel with server-side turn detection enabled, ignoring the turnDetection setting"}
+{"harness":true,"time":1790970629595,"event":"conversation_item_added"}
+{"level":20,"time":1790970629595,"pid":7012,"hostname":"mac.home","newAgentId":"default_agent","msg":"Agent handoff inserted into chat context"}
+{"level":20,"time":1790970629596,"pid":7012,"hostname":"mac.home","msg":"Connecting to Gemini Realtime API..."}
+{"harness":true,"time":1790970629596,"event":"genai_live_connect","n":1,"model":"gemini-3.8-live","functionDeclarations":[]}
+{"level":20,"time":1790970629603,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity_onEnter started"}
+{"level":20,"time":1790970629604,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity_onEnter done"}
+{"level":20,"time":1790970629604,"pid":7012,"hostname":"mac.home","msg":"using audio io: `FileAudioInput` -> `AgentSession` -> `SimAudioOutput`"}
+{"level":40,"time":1790970629604,"pid":7012,"hostname":"mac.home","audioOutput":"SimAudioOutput","msg":"resumeFalseInterruption is enabled but audio output does not support pause, it will be ignored"}
+{"level":20,"time":1790970629604,"pid":7012,"hostname":"mac.home","msg":"using transcript io: `AgentSession` -> (none)"}
+{"harness":true,"time":1790970629604,"event":"agent_state","from":"initializing","to":"listening"}
+{"harness":true,"time":1790970629604,"event":"session_started"}
+{"level":20,"time":1790970629962,"pid":7012,"hostname":"mac.home","closed":false,"sessionShouldClose":true,"aborted":false,"msg":"send task finished."}
+{"level":20,"time":1790970629966,"pid":7012,"hostname":"mac.home","msg":"Connecting to Gemini Realtime API..."}
+{"harness":true,"time":1790970629966,"event":"genai_live_connect","n":2,"model":"gemini-3.8-live","functionDeclarations":[{"name":"book_slot","behavior":"unset"}]}
+{"level":20,"time":1790970629974,"pid":7012,"hostname":"mac.home","msg":"Gemini Live session closed:"}
+{"level":20,"time":1790970630401,"pid":7012,"hostname":"mac.home","lk.pii.response":{"sessionResumptionUpdate":{"newHandle":"f0a845a9-48b2-4e60-a632-ab529abfb8e6","resumable":true}},"msg":"received Gemini Live server event"}
+{"harness":true,"time":1790970630606,"event":"user_clip_started"}
+{"level":20,"time":1790970630821,"pid":7012,"hostname":"mac.home","lk.pii.response":{"voiceActivity":{"type":"ACTIVITY_START","audioOffset":"1.160s"}},"msg":"received Gemini Live server event"}
+{"harness":true,"time":1790970633286,"event":"user_clip_ended"}
+{"level":20,"time":1790970634429,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970634430,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970634430,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"inputTranscription":{"text":"Put me the 3:00 p.m. slot tomorrow. Please."}}},"msg":"received Gemini Live server event"}
+{"level":30,"time":1790970634430,"pid":7012,"hostname":"mac.home","msg":"onInputSpeechStarted"}
+{"harness":true,"time":1790970634431,"event":"user_state","from":"listening","to":"speaking"}
+{"harness":true,"time":1790970634431,"event":"speech_created","speechId":"speech_1266c39a-516","source":"generate_reply","userInitiated":false}
+{"level":30,"time":1790970634432,"pid":7012,"hostname":"mac.home","speech_id":"speech_1266c39a-516","msg":"Creating speech handle"}
+{"level":20,"time":1790970634432,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtimeGeneration started"}
+{"level":20,"time":1790970634432,"pid":7012,"hostname":"mac.home","speech_id":"speech_1266c39a-516","stepIndex":1,"msg":"realtime generation started"}
+{"level":20,"time":1790970634433,"pid":7012,"hostname":"mac.home","msg":"new generation started: GR_573f9384-d48"}
+{"level":20,"time":1790970634433,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.process_messages started"}
+{"level":20,"time":1790970634433,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.read_tool_stream started"}
+{"level":20,"time":1790970634433,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performToolExecutions started"}
+{"level":20,"time":1790970634434,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performAudioForwarding started"}
+{"level":20,"time":1790970634434,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performTextForwarding started"}
+{"level":20,"time":1790970634434,"pid":7012,"hostname":"mac.home","lk.pii.response":{"voiceActivity":{"type":"ACTIVITY_END","audioOffset":"4.760s"}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970634434,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970634434,"pid":7012,"hostname":"mac.home","lk.pii.response":{"toolCall":{"functionCalls":[{"name":"book_slot","args":{"slot":"tomorrow 3pm"},"id":"call_470447"}]}},"msg":"received Gemini Live server event"}
+{"level":30,"time":1790970634435,"pid":7012,"hostname":"mac.home","userTranscriptionEnabled":false,"msg":"onInputSpeechStopped"}
+{"harness":true,"time":1790970634435,"event":"user_state","from":"speaking","to":"listening"}
+{"harness":true,"time":1790970634435,"event":"conversation_item_added","role":"user","interrupted":false,"text":"Put me the 3:00 p.m. slot tomorrow. Please."}
+{"level":20,"time":1790970634435,"pid":7012,"hostname":"mac.home","lk.pii.tool_call":{"id":"item_64b94de0-f01","type":"function_call","callId":"call_470447","name":"book_slot","args":"{\"slot\":\"tomorrow 3pm\"}","createdAt":1790970634435},"msg":"received tool call from the realtime API"}
+{"level":20,"time":1790970634436,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performTextForwarding done"}
+{"level":30,"time":1790970634436,"pid":7012,"hostname":"mac.home","function":"book_slot","lk.pii.arguments":{"slot":"tomorrow 3pm"},"speech_id":"speech_1266c39a-516","msg":"Executing LLM tool call"}
+{"level":20,"time":1790970634436,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performToolExecution:book_slot started"}
+{"level":20,"time":1790970634436,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performAudioForwarding done"}
+{"harness":true,"time":1790970634436,"event":"tool_execute_started","slot":"tomorrow 3pm","callId":"call_470447"}
+{"level":20,"time":1790970634436,"pid":7012,"hostname":"mac.home","msg":"firstFrameFut cancelled before first frame"}
+{"level":20,"time":1790970634436,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.process_messages done"}
+{"level":20,"time":1790970634436,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.read_tool_stream done"}
+{"harness":true,"time":1790970634437,"event":"agent_state","from":"listening","to":"thinking"}
+{"level":20,"time":1790970634437,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"generationComplete":true}},"msg":"received Gemini Live server event"}
+{"level":30,"time":1790970634437,"pid":7012,"hostname":"mac.home","msg":"onInputSpeechStarted"}
+{"harness":true,"time":1790970634437,"event":"user_state","from":"listening","to":"speaking"}
+{"harness":true,"time":1790970634437,"event":"speech_created","speechId":"speech_a1988644-cb8","source":"generate_reply","userInitiated":false}
+{"level":30,"time":1790970634437,"pid":7012,"hostname":"mac.home","speech_id":"speech_a1988644-cb8","msg":"Creating speech handle"}
+{"level":20,"time":1790970634437,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtimeGeneration started"}
+{"level":20,"time":1790970634437,"pid":7012,"hostname":"mac.home","speech_id":"speech_a1988644-cb8","stepIndex":1,"msg":"realtime generation started"}
+{"level":20,"time":1790970634437,"pid":7012,"hostname":"mac.home","msg":"new generation started: GR_e7a7416f-1b1"}
+{"level":20,"time":1790970634437,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.process_messages started"}
+{"level":20,"time":1790970634437,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.read_tool_stream started"}
+{"level":20,"time":1790970634437,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performToolExecutions started"}
+{"level":20,"time":1790970634437,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performAudioForwarding started"}
+{"level":20,"time":1790970634437,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performTextForwarding started"}
+{"level":20,"time":1790970634437,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"turnComplete":true},"usageMetadata":{"promptTokenCount":755,"responseTokenCount":15,"totalTokenCount":770,"promptTokensDetails":[{"modality":"TEXT","tokenCount":418},{"modality":"AUDIO","tokenCount":282}],"thoughtsTokenCount":67}},"msg":"received Gemini Live server event"}
+{"level":30,"time":1790970634437,"pid":7012,"hostname":"mac.home","userTranscriptionEnabled":false,"msg":"onInputSpeechStopped"}
+{"harness":true,"time":1790970634437,"event":"user_state","from":"speaking","to":"listening"}
+{"level":20,"time":1790970634438,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performTextForwarding done"}
+{"level":20,"time":1790970634438,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performAudioForwarding done"}
+{"level":20,"time":1790970634438,"pid":7012,"hostname":"mac.home","msg":"firstFrameFut cancelled before first frame"}
+{"level":20,"time":1790970634438,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.process_messages done"}
+{"level":20,"time":1790970634438,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.read_tool_stream done"}
+{"level":20,"time":1790970634438,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performToolExecutions done"}
+{"level":20,"time":1790970634438,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtimeGeneration done"}
+{"harness":true,"time":1790970634438,"event":"speech_done","speechId":"speech_a1988644-cb8","interrupted":false}
+{"harness":true,"time":1790970637439,"event":"tool_execute_finished","slot":"tomorrow 3pm","callId":"call_470447","abortSignalAborted":false}
+{"level":20,"time":1790970637440,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performToolExecution:book_slot done"}
+{"level":20,"time":1790970637440,"pid":7012,"hostname":"mac.home","speech_id":"speech_1266c39a-516","msg":"tools execution completed"}
+{"level":20,"time":1790970637440,"pid":7012,"hostname":"mac.home","speechId":"speech_1266c39a-516","name":"book_slot","lk.pii.arguments":"{\"slot\":\"tomorrow 3pm\"}","lk.pii.output":"{\"status\":\"booked\",\"slot\":\"tomorrow 3pm\"}","isError":false,"msg":"Tool call execution finished"}
+{"harness":true,"time":1790970637440,"event":"function_tools_executed","calls":[{"name":"book_slot","callId":"call_470447"}],"outputs":[{"callId":"call_470447","isError":false,"output":"{\"status\":\"booked\",\"slot\":\"tomorrow 3pm\"}"}]}
+{"level":20,"time":1790970637440,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performToolExecutions done"}
+{"level":20,"time":1790970637440,"pid":7012,"hostname":"mac.home","eventType":"tool_response","lk.pii.event":{"type":"tool_response","value":{"functionResponses":[{"name":"book_slot","response":{"output":"{\"status\":\"booked\",\"slot\":\"tomorrow 3pm\"}"},"id":"call_470447"}]}},"msg":"sent Gemini Live client event"}
+{"harness":true,"time":1790970637440,"event":"genai_send_tool_response","responses":[{"id":"call_470447","name":"book_slot"}]}
+{"level":20,"time":1790970637441,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtimeGeneration done"}
+{"harness":true,"time":1790970637441,"event":"speech_done","speechId":"speech_1266c39a-516","interrupted":true}
+{"level":20,"time":1790970637823,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970637824,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638058,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638059,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"AgAFAAUABwAGAAYACQALAAoACgAJAA…"}}],"role":"model"},"outputTranscription":{"text":"I am booking the "}}},"msg":"received Gemini Live server event"}
+{"level":30,"time":1790970638060,"pid":7012,"hostname":"mac.home","msg":"onInputSpeechStarted"}
+{"harness":true,"time":1790970638060,"event":"user_state","from":"listening","to":"speaking"}
+{"harness":true,"time":1790970638061,"event":"speech_created","speechId":"speech_d5972bee-b7c","source":"generate_reply","userInitiated":false}
+{"level":30,"time":1790970638061,"pid":7012,"hostname":"mac.home","speech_id":"speech_d5972bee-b7c","msg":"Creating speech handle"}
+{"level":20,"time":1790970638061,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtimeGeneration started"}
+{"level":20,"time":1790970638061,"pid":7012,"hostname":"mac.home","speech_id":"speech_d5972bee-b7c","stepIndex":1,"msg":"realtime generation started"}
+{"level":20,"time":1790970638062,"pid":7012,"hostname":"mac.home","msg":"new generation started: GR_c2a5e31a-92c"}
+{"level":20,"time":1790970638062,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.process_messages started"}
+{"level":20,"time":1790970638062,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.read_tool_stream started"}
+{"level":20,"time":1790970638062,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performToolExecutions started"}
+{"level":20,"time":1790970638063,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performAudioForwarding started"}
+{"level":20,"time":1790970638063,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performTextForwarding started"}
+{"harness":true,"time":1790970638063,"event":"playout_started"}
+{"level":20,"time":1790970638063,"pid":7012,"hostname":"mac.home","warmupDurationMs":3000,"msg":"aec warmup active, disabling interruptions"}
+{"harness":true,"time":1790970638063,"event":"agent_state","from":"thinking","to":"speaking"}
+{"level":20,"time":1790970638087,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638089,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"bwWxBk8GYgT+AAX9Dvip8tDtTujY4+…"}}],"role":"model"}}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638113,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638117,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"dg0bDhIP3A91EKEQFBAYD8wNTwznCs…"}}],"role":"model"}}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638175,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638175,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"0+nC7FjwffK19BH3Jfq9/AD/xf7s/K…"}}],"role":"model"}}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638201,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638202,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"pt292QDar9af1L7Rts+QzkDNJM6Szo…"}}],"role":"model"}}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638314,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638317,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"FAlJCnwKdgvhCZcJGAr6CRIK0gm+CD…"}}],"role":"model"},"outputTranscription":{"text":"3 PM slot tomorrow"}}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638471,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638487,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"dP+U/5H/iP+C/1b/Dv/Y/rX+rf6l/o…"}}],"role":"model"}}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638585,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638585,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"IRPm9sf5BwaDCTv01AN7Apz5vRBp76…"}}],"role":"model"},"outputTranscription":{"text":" for you."}}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638638,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638640,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"/wqDDy4UwRkCH28jqSbCJ9ImbSLiG4…"}}],"role":"model"}}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638713,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638713,"pid":7012,"hostname":"mac.home","lk.pii.response":{},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638715,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"z/h1+Wb6fftx/Av9cP1q/Qv9gPy7+4…"}}],"role":"model"}}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638715,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA…"}}],"role":"model"}}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970638741,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"generationComplete":true}},"msg":"received Gemini Live server event"}
+{"level":20,"time":1790970641057,"pid":7012,"hostname":"mac.home","lk.pii.response":{"serverContent":{"turnComplete":true},"usageMetadata":{"promptTokenCount":797,"responseTokenCount":81,"totalTokenCount":878,"promptTokensDetails":[{"modality":"TEXT","tokenCount":442},{"modality":"AUDIO","tokenCount":282}],"responseTokensDetails":[{"modality":"AUDIO","tokenCount":81}],"thoughtsTokenCount":69}},"msg":"received Gemini Live server event"}
+{"level":30,"time":1790970641057,"pid":7012,"hostname":"mac.home","userTranscriptionEnabled":false,"msg":"onInputSpeechStopped"}
+{"harness":true,"time":1790970641058,"event":"user_state","from":"speaking","to":"listening"}
+{"level":20,"time":1790970641060,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performTextForwarding done"}
+{"level":20,"time":1790970641060,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performAudioForwarding done"}
+{"level":20,"time":1790970641060,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.read_tool_stream done"}
+{"level":20,"time":1790970641060,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task performToolExecutions done"}
+{"level":20,"time":1790970641066,"pid":7012,"hostname":"mac.home","msg":"aec warmup expired, re-enabling interruptions"}
+{"harness":true,"time":1790970641074,"event":"playout_finished","interrupted":false,"playedMs":3010,"pushedMs":3010}
+{"level":20,"time":1790970641075,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtime_generation.process_messages done"}
+{"harness":true,"time":1790970641075,"event":"conversation_item_added","role":"assistant","interrupted":false,"text":"I am booking the 3 PM slot tomorrow for you."}
+{"harness":true,"time":1790970641075,"event":"agent_state","from":"speaking","to":"listening"}
+{"level":20,"time":1790970641075,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity.realtimeGeneration done"}
+{"harness":true,"time":1790970641075,"event":"speech_done","speechId":"speech_d5972bee-b7c","interrupted":false}
+{"harness":true,"time":1790970649518,"event":"run_end","connects":2}
+{"level":20,"time":1790970649521,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity_onExit started"}
+{"level":20,"time":1790970649521,"pid":7012,"hostname":"mac.home","msg":"Task.runTask: task AgentActivity_onExit done"}
+{"level":30,"time":1790970649521,"pid":7012,"hostname":"mac.home","msg":"mainTask: scheduling paused and no more speech tasks to wait"}
+{"level":30,"time":1790970649521,"pid":7012,"hostname":"mac.home","msg":"AgentActivity mainTask: exiting"}
+{"level":20,"time":1790970649524,"pid":7012,"hostname":"mac.home","closed":true,"sessionShouldClose":true,"aborted":true,"msg":"send task finished."}
+{"level":20,"time":1790970649599,"pid":7012,"hostname":"mac.home","msg":"Gemini Live session closed:"}
+{"level":20,"time":1790970650024,"pid":7012,"hostname":"mac.home","msg":"running EOU detection on commitUserTurn"}
+{"level":20,"time":1790970650025,"pid":7012,"hostname":"mac.home","lk.pii.audio_transcript":"","msg":"running EOU detection"}
+{"level":20,"time":1790970650026,"pid":7012,"hostname":"mac.home","lk.pii.transcript":"","msg":"end of user turn"}
+{"level":40,"time":1790970650027,"pid":7012,"hostname":"mac.home","lk.pii.user_input":"","msg":"skipping user input, speech scheduling is paused"}
+{"level":20,"time":1790970650027,"pid":7012,"hostname":"mac.home","msg":"User turn committed"}
+{"level":20,"time":1790970650027,"pid":7012,"hostname":"mac.home","msg":"EOU detection task completed"}
+{"harness":true,"time":1790970650028,"event":"session_close","reason":"user_initiated"}
+{"level":30,"time":1790970650028,"pid":7012,"hostname":"mac.home","reason":"user_initiated","error":null,"msg":"AgentSession closed"}

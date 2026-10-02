@@ -1,0 +1,36 @@
+--- a/dist/realtime/realtime_api.js	2026-10-02 21:51:04
++++ b/dist/realtime/realtime_api.js	2026-10-02 21:51:12
+@@ -1346,7 +1346,14 @@
+       return true;
+     }
+     const serverContent = response.serverContent;
+-    return !!serverContent && (serverContent.modelTurn || serverContent.outputTranscription != null || serverContent.inputTranscription != null || serverContent.generationComplete != null || serverContent.turnComplete != null);
++    if (!serverContent) {
++      return false;
++    }
++    const hasContent = !!serverContent.modelTurn || serverContent.outputTranscription != null || serverContent.inputTranscription != null;
++    if (!hasContent && !this.pendingGenerationFut) {
++      return false;
++    }
++    return hasContent || serverContent.generationComplete != null || serverContent.turnComplete != null;
+   }
+ }
+ export {
+--- a/dist/realtime/realtime_api.cjs	2026-10-02 21:51:04
++++ b/dist/realtime/realtime_api.cjs	2026-10-02 21:51:12
+@@ -1362,7 +1362,14 @@
+       return true;
+     }
+     const serverContent = response.serverContent;
+-    return !!serverContent && (serverContent.modelTurn || serverContent.outputTranscription != null || serverContent.inputTranscription != null || serverContent.generationComplete != null || serverContent.turnComplete != null);
++    if (!serverContent) {
++      return false;
++    }
++    const hasContent = !!serverContent.modelTurn || serverContent.outputTranscription != null || serverContent.inputTranscription != null;
++    if (!hasContent && !this.pendingGenerationFut) {
++      return false;
++    }
++    return hasContent || serverContent.generationComplete != null || serverContent.turnComplete != null;
+   }
+ }
+ // Annotate the CommonJS export names for ESM import in node:

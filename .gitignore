@@ -1,0 +1,10 @@
+.env
+app/.env
+app/node_modules/
+agents-js/
+issue.json
+comments.json
+COMMENT_DRAFT.md
+__pycache__/
+*.pyc
+.DS_Store

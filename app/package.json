@@ -1,0 +1,12 @@
+{
+  "name": "livekit-2615-check",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "dependencies": {
+    "@livekit/agents": "1.9.1",
+    "@livekit/agents-plugin-google": "1.9.1",
+    "@livekit/rtc-node": "1.1.0",
+    "zod": "3.25.76"
+  }
+}
